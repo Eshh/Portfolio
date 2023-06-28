@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Eswar Prasad Kona - Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursvie"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "sass"
+  ],
+  "author": "Eswar Prasad Kona",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
