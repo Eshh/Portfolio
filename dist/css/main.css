@@ -382,6 +382,39 @@ img {
   width: 70%;
   margin: auto; }
 
+#contact-a .text-fields {
+  display: grid;
+  grid-template-areas: "name-input email-input" "subject-input phone-input" "message-input message-input";
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem; }
+  #contact-a .text-fields .name-input {
+    grid-area: name-input; }
+  #contact-a .text-fields .email-input {
+    grid-area: email-input; }
+  #contact-a .text-fields .subject-input {
+    grid-area: subject-input; }
+  #contact-a .text-fields .phone-input {
+    grid-area: phone-input; }
+  #contact-a .text-fields .message-input {
+    grid-area: message-input;
+    height: 100px; }
+  #contact-a .text-fields .text-input {
+    padding: 0.5rem 1rem; }
+
+#contact-a button[type="submit"] {
+  width: 50%;
+  border-radius: 3px; }
+
+#contact-b .contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  text-align: center; }
+
+#contact-c h1 {
+  text-align: center;
+  font-size: 2rem; }
+
 #main-footer {
   background-color: #725696;
   color: #fff;
