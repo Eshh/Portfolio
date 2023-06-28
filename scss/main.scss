@@ -1,5 +1,263 @@
-$color: red;
+@import "./config";
+@import "./utilities";
 
+// reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// General styles
 body {
-  background: $color;
+  font-family: $font-family;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// logo
+#logo {
+  width: 70px;
+  height: 70px;
+  text-transform: uppercase;
+  color: #fff;
+}
+//main-nav
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+// header
+
+#header {
+  // Header home
+  &-home {
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+
+    // header content
+    .header-content {
+      padding-top: 20%;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  //   header -inner
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+// Home sections
+
+#home {
+  // Home section A
+  &-a {
+    .specials {
+      display: grid;
+      margin-top: 3rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+
+    i {
+      color: $main-color;
+      padding-bottom: 0.4rem;
+    }
+  }
+  //   Home section B
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    ul {
+      padding: 2rem 0;
+    }
+
+    li {
+      line-height: 2;
+      &.stats-title {
+        font-size: 1.5rem;
+      }
+      &.stats-number {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+    div {
+      //   padding: 3rem 0;
+      &:nth-child(odd) {
+        background: $light-color;
+      }
+      &:nth-child(even) {
+        background: $medium-color;
+      }
+    }
+  }
+  //    Home section C
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        color: setTextColor($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+
+      &-icon {
+        border-radius: 50%;
+        background: $light-color;
+        color: setTextColor($light-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          .process-step {
+            background-color: $dark-color;
+            color: setTextColor($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// About
+
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas: "bioimage bio bio" "award1 award2 award3";
+      grid-gap: 1.2rem;
+    }
+    .bio-image {
+      grid-area: bioimage;
+    }
+    .bio {
+      grid-area: bio;
+      border: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+    .award-1 {
+      grid-area: award1;
+    }
+    .award-2 {
+      grid-area: award2;
+    }
+    .award-3 {
+      grid-area: award3;
+    }
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+}
+
+// footer
+#main-footer {
+  background-color: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
 }
