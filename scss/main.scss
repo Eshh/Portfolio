@@ -1,5 +1,6 @@
 @import "./config";
 @import "./utilities";
+@import "./item_grid";
 
 // reset
 * {
@@ -96,7 +97,7 @@ img {
   &-inner {
     background: $bg-image no-repeat 20% 30% / cover;
     height: 5.5rem;
-    border-bottom: 3px solid $main-color;
+    border-bottom: 2px solid $main-color;
   }
 }
 
@@ -145,6 +146,7 @@ img {
       }
       &:nth-child(even) {
         background: $medium-color;
+        color: setTextColor($medium-color);
       }
     }
   }
@@ -212,8 +214,14 @@ img {
     }
     .bio {
       grid-area: bio;
-      border: 3px solid $main-color;
+      border: 1px solid $main-color;
+      border-radius: 5px;
       padding: 0.8rem;
+
+      h4,
+      p {
+        margin-top: 1.5rem;
+      }
     }
     .award-1 {
       grid-area: award1;
@@ -231,11 +239,74 @@ img {
       margin: 1rem;
     }
   }
+  //   Progress bars
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        height: 100%;
+        color: #fff;
+        background: $main-color;
+        text-align: center;
+        p {
+          position: relative;
+          top: -15%;
+          left: 0%;
+        }
+      }
+    }
+  }
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+    }
+    ul {
+      list-style: none;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.inner-container {
+  width: 70%;
+  margin: auto;
 }
 
 // footer
 #main-footer {
-  background-color: $dark-color;
+  background-color: $medium-color;
   color: #fff;
   height: 5rem;
 
