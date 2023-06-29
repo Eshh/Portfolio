@@ -24,8 +24,15 @@
       height: 25rem;
       border-bottom: 3px solid $main-color;
       background-position: 20% 30%;
+      a {
+        color: $dark-color;
+      }
       .header-content {
         // display: none;
+        p,
+        a {
+          display: none;
+        }
         h1 {
           font-size: 1rem;
         }
@@ -78,6 +85,12 @@
       }
     }
     &-c {
+      .about-logos {
+        grid-template-columns: 1fr;
+        img {
+          margin-left: 40px;
+        }
+      }
     }
   }
 
@@ -103,6 +116,9 @@
     }
 
     &-c {
+      iframe {
+        width: 100%;
+      }
       h1 {
         font-size: 1rem;
       }
@@ -123,7 +139,7 @@
 @media (max-height: 580px) {
   #header-home {
     .header-content {
-      padding-top: 3rem;
+      padding-top: 1rem;
     }
   }
 }

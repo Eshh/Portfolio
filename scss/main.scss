@@ -80,8 +80,11 @@ img {
   &-home {
     background: $bg-image no-repeat center right/cover;
     height: 100vh;
-    color: #fff;
+    color: $dark-color;
 
+    a {
+      color: $dark-color;
+    }
     // header content
     .header-content {
       padding-top: 20%;
@@ -98,6 +101,9 @@ img {
     background: $bg-image no-repeat 20% 30% / cover;
     height: 5.5rem;
     border-bottom: 2px solid $main-color;
+    a {
+      color: $dark-color;
+    }
   }
 }
 
@@ -211,6 +217,8 @@ img {
     }
     .bio-image {
       grid-area: bioimage;
+      height: 350px;
+      width: 100%;
     }
     .bio {
       grid-area: bio;
@@ -268,14 +276,15 @@ img {
       grid-gap: 2rem;
 
       img {
-        width: 70%;
+        width: 80%;
+        height: 100%;
       }
     }
   }
   &-d {
     .testimonials {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 4fr);
       grid-gap: 0.5rem;
       p {
         border: 1px solid $medium-color;
@@ -377,6 +386,7 @@ img {
       line-height: 20px;
       text-align: center;
       padding: 0.5rem;
+      color: #fff;
 
       &:hover {
         background-color: $main-color;

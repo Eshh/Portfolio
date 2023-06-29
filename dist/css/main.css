@@ -217,9 +217,11 @@ img {
       border-color: #a05ff3; }
 
 #header-home {
-  background: url("../img/showcase.jpg") no-repeat center right/cover;
+  background: url("../img/me.jpeg") no-repeat center right/cover;
   height: 100vh;
-  color: #fff; }
+  color: #402266; }
+  #header-home a {
+    color: #402266; }
   #header-home .header-content {
     padding-top: 20%;
     text-align: center; }
@@ -228,9 +230,11 @@ img {
       line-height: 1.2; }
 
 #header-inner {
-  background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
+  background: url("../img/me.jpeg") no-repeat 20% 30%/cover;
   height: 5.5rem;
   border-bottom: 2px solid #a05ff3; }
+  #header-inner a {
+    color: #402266; }
 
 #home-a .specials {
   display: grid;
@@ -308,7 +312,9 @@ img {
   grid-gap: 1.2rem; }
 
 #about-a .bio-image {
-  grid-area: bioimage; }
+  grid-area: bioimage;
+  height: 350px;
+  width: 100%; }
 
 #about-a .bio {
   grid-area: bio;
@@ -355,11 +361,12 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem; }
   #about-c .about-logos img {
-    width: 70%; }
+    width: 80%;
+    height: 100%; }
 
 #about-d .testimonials {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 4fr);
   grid-gap: 0.5rem; }
   #about-d .testimonials p {
     border: 1px solid #725696;
@@ -432,7 +439,8 @@ img {
       width: 20px;
       line-height: 20px;
       text-align: center;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      color: #fff; }
       #main-footer .footer-content .social .fab:hover {
         background-color: #a05ff3; }
 
@@ -452,6 +460,11 @@ img {
     height: 25rem;
     border-bottom: 3px solid #a05ff3;
     background-position: 20% 30%; }
+    #header-home a {
+      color: #402266; }
+    #header-home .header-content p,
+    #header-home .header-content a {
+      display: none; }
     #header-home .header-content h1 {
       font-size: 1rem; }
     #header-home .header-content a {
@@ -475,6 +488,10 @@ img {
     padding: 2rem 0 1rem 0; }
   #about-a .about-info {
     grid-template-areas: "bioimage" "bio" "award1" "award2" "award3"; }
+  #about-c .about-logos {
+    grid-template-columns: 1fr; }
+    #about-c .about-logos img {
+      margin-left: 40px; }
   #contact-a .text-fields {
     grid-template-areas: "name-input" "email-input" "phone-input" "subject-input" "message-input"; }
   #contact-b .contact-info {
@@ -485,6 +502,8 @@ img {
       #contact-b .contact-info div:last-child {
         border: none;
         padding: 0; }
+  #contact-c iframe {
+    width: 100%; }
   #contact-c h1 {
     font-size: 1rem; }
   #main-footer {
@@ -496,7 +515,7 @@ img {
 
 @media (max-height: 580px) {
   #header-home .header-content {
-    padding-top: 3rem; } }
+    padding-top: 1rem; } }
 
 @media (max-height: 330px) {
   #header-home .header-content h1 {
