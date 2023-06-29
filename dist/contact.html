@@ -38,13 +38,16 @@
             <div class="bottom-line"></div>
             <p class="lead">Here is how you can reach me</p>
 
-            <form>
+            <form name="contact" data-netlify-recaptcha="true" method="POST" data-netlify="true">
                 <div class="text-fields">
-                    <input type="text" placeholder="Name" class="text-input name-input">
-                    <input type="text" placeholder="Subject" class="text-input subject-input">
-                    <input type="email" placeholder="Email" class="text-input name-email">
-                    <input type="number" placeholder="Phone" class="text-input phone-input">
-                    <textarea class="text-input message-input" placeholder="Enter message"></textarea>
+                    <input name="name" type="text" placeholder="Name" class="text-input name-input">
+                    <input name='subject' type="text" placeholder="Subject" class="text-input subject-input">
+                    <input name="email" type="email" placeholder="Email" class="text-input name-email">
+                    <input name='phone' type="number" placeholder="Phone" class="text-input phone-input">
+                    <textarea name='message' class="text-input message-input" placeholder="Enter message"></textarea>
+                    <div class="my-2">
+                        <div data-netlify-recaptcha='true'></div>
+                    </div>
                 </div>
                 <button class="btn-dark" type="submit">Submit</button>
             </form>
@@ -74,7 +77,7 @@
     </section>
 
     <!-- Section C -->
-    <section id="contact-c" class="bg-main py-4">
+    <section id="contact-c" class=" py-4">
         <div class="container">
             <h1>Lets start working together</h1>
         </div>
